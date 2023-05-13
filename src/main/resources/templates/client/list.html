@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+tu będzie lista klientów
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Phone</th>
+        <th>Email</th>
+    </tr>
+    <!--/*@thymesVar id="client" type="com.example.bestcrmintheuniverse.entities.Client"*/-->
+    <tr th:each="client: ${clients}">
+        <td th:text="${client.id}"></td>
+        <td th:text="${client.name}"></td>
+        <td th:text="${client.address}"></td>
+        <td th:text="${client.phone}"></td>
+        <td th:text="${client.email}"></td>
+    </tr>
+</table>
+</body>
+</html>
