@@ -1,0 +1,64 @@
+<html lang="en" layout:decorate="~{layouts/main}"
+      xmlns:layout="https://www.ultraq.net.nz/thymeleaf/layout">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!--/*@thymesVar id="client" type="com.example.bestcrmintheuniverse.entities.Client"*/-->
+<form th:action="@{/client/save}" method="post" th:object="${client}">
+
+  <div class="row g-3 align-items-center">
+    <div class="col-auto">
+      <label for="name" class="col-form-label">name</label>
+    </div>
+    <div class="col-auto">
+      <input type="text" id="name" class="form-control" th:field="*{name}" placeholder="name">
+    </div>
+    <div class="col-auto">
+    </div>
+
+    <div class="col-auto">
+      <label for="address" class="col-form-label">address</label>
+    </div>
+    <div class="col-auto">
+      <input type="text" id="address" class="form-control" th:field="*{address}" placeholder="address">
+    </div>
+    <div class="col-auto">
+    </div>
+  </div>
+
+  <div class="col-auto">
+    <label for="phone" class="col-form-label">phone</label>
+  </div>
+  <div class="col-auto">
+    <input type="text" id="phone" class="form-control" th:field="*{phone}" placeholder="phone">
+  </div>
+  <div class="col-auto">
+  </div>
+  </div>
+
+  <div class="col-auto">
+    <label for="email" class="col-form-label">email</label>
+  </div>
+  <div class="col-auto">
+    <input type="text" id="email" class="form-control" th:field="*{email}" placeholder="address">
+  </div>
+  <div class="col-auto">
+  </div>
+  </div>
+
+<input id="lastContact" placeholder="lastContact" th:field="*{lastContact}" type="date">
+
+  <input class="btn btn-primary" type="submit" value="Save">
+</form>
+</section>
+</div>
+
+
+
+</body>
+</html>
