@@ -1,0 +1,63 @@
+<html lang="en" layout:decorate="~{layouts/main}"
+      xmlns:layout="https://www.ultraq.net.nz/thymeleaf/layout">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Best Java Project in the Universe</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<!--linking header from header file-->
+<div th:replace="~{/fragments/header :: header}"></div>
+
+<!--/*@thymesVar id="deal" type="com.example.bestcrmintheuniverse.entities.Deal"*/-->
+<form th:action="@{/deal/save}" method="post" th:object="${deal}">
+
+    <div class="row g-3 align-items-center">
+        <div class="col-auto">
+            <label for="budget" class="col-form-label">budget</label>
+        </div>
+        <div class="col-auto">
+            <input type="text" id="budget" class="form-control" th:field="*{budget}" placeholder="budget">
+        </div>
+        <div class="col-auto">
+        </div>
+
+        <div class="col-auto">
+            <label for="state" class="col-form-label">state</label>
+        </div>
+        <div class="col-auto">
+            <input type="text" id="state" class="form-control" th:field="*{state}" placeholder="state">
+        </div>
+        <div class="col-auto">
+        </div>
+    </div>
+
+    <div class="col-auto">
+        <label for="name" class="col-form-label">name</label>
+    </div>
+    <div class="col-auto">
+        <input type="text" id="name" class="form-control" th:field="*{name}" placeholder="name">
+    </div>
+    <div class="col-auto">
+    </div>
+    </div>
+
+
+    <input id="startDate" placeholder="startDate" th:field="*{startDate}" type="date">
+
+    <input class="btn btn-primary" type="submit" value="Save">
+</form>
+</section>
+</div>
+
+
+
+</body>
+</html>
