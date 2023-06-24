@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:background-color="http://www.w3.org/1999/xhtml">
 <head>
   <meta charset="UTF-8">
   <title></title>
@@ -9,25 +9,79 @@
 <div th:fragment = "header">
   <!--    navigation-->
   <!--    fixed-top sticky top -->
-  <nav class="navbar navbar-expand-lg p-3 mb-2 bg-info-subtle text-emphasis-info"  >
+  <nav class="navbar sticky-top navbar-expand-lg navbar-dark"  style="background-color: #073642;">
     <div class="container-fluid">
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Best CRM ever</a>
+            <a class="nav-link active" aria-current="page" href="https://youtu.be/dQw4w9WgXcQ">Best CRM ever</a>
           </li>
+          <!--
           <li class="nav-item">
             <a class="nav-link" href="/client/add">add new client</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/client/list">clients list</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/deal/add">add new deal</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/deal/list">deals list</a>
-          </li>
+            <a class="nav-link" href="/client/">clients list</a>
+          </li>-->
+
+          <div class="collapse navbar-collapse" id="navbarNavDarkDropdownClients" >
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  clients
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark"  style="background-color: #073642;">
+                  <li><a class="dropdown-item" href="/client/add">add new client</a></li>
+                  <li><a class="dropdown-item" href="/client/">clients list</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <!--   <div class="collapse navbar-collapse" id="navbarNavDarkDropdownNotes" >
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  deals
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark"  style="background-color: #073642;">
+                  <li><a class="dropdown-item" href="/employee/add">add new employee</a></li>
+                  <li><a class="dropdown-item" href="/notes/">employees list</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>-->
+
+          <div class="collapse navbar-collapse" id="navbarNavDarkDropdownDeals" >
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  deals
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark"  style="background-color: #073642;">
+                  <li><a class="dropdown-item" href="/deal/add">add new deal</a></li>
+                  <li><a class="dropdown-item" href="/deal/">deals list</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+
+       <!--   <div class="collapse navbar-collapse" id="navbarNavDarkDropdownNotes" >
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  deals
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark"  style="background-color: #073642;">
+                  <li><a class="dropdown-item" href="/notes/add">add new note</a></li>
+                  <li><a class="dropdown-item" href="/notes/">notes list</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>-->
+
+
           <li class="nav-item">
             <a class="nav-link disabled">+++Divide By Cucumber Error. Please Reinstall Universe And Reboot +++</a>
           </li>

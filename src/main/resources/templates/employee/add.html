@@ -1,10 +1,8 @@
-<html lang="en" layout:decorate="~{layouts/main}"
-      xmlns:layout="https://www.ultraq.net.nz/thymeleaf/layout">
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Best Java Project in the Multiverse</title>
+  <meta charset="UTF-8">
+  <title>Best Java Project in the World</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
@@ -14,12 +12,10 @@
 </head>
 <body>
 <!--linking header from header file-->
-
 <div th:replace="~{/fragments/header :: header}"></div>
 
-
-<!--/*@thymesVar id="client" type="com.example.bestcrmintheuniverse.entities.Client"*/-->
-<form th:action="@{/client/save}" method="post" th:object="${client}">
+<!--/*@thymesVar id="person" type="com.example.bestcrmintheuniverse.entities.Person"*/-->
+<form th:action="@{/employee/save}" method="post" th:object="${person}">
 
   <div class="row g-3 align-items-center">
     <div class="col-auto">
@@ -32,36 +28,36 @@
     </div>
 
     <div class="col-auto">
-      <label for="address" class="col-form-label">address</label>
+      <label for="position" class="col-form-label">position</label>
     </div>
     <div class="col-auto">
-      <input type="text" id="address" class="form-control" th:field="*{address}" placeholder="address">
+      <input type="text" id="position" class="form-control" th:field="*{position}" placeholder="position">
     </div>
     <div class="col-auto">
     </div>
 
-  <div class="col-auto">
-    <label for="phone" class="col-form-label">phone</label>
-  </div>
-  <div class="col-auto">
-    <input type="text" id="phone" class="form-control" th:field="*{phone}" placeholder="phone">
-  </div>
-  <div class="col-auto">
-  </div>
+    <div class="col-auto">
+      <label for="phone" class="col-form-label">phone</label>
+    </div>
+    <div class="col-auto">
+      <input type="text" id="phone" class="form-control" th:field="*{phone}" placeholder="phone">
+    </div>
+    <div class="col-auto">
+    </div>
 
-  <div class="col-auto">
-    <label for="email" class="col-form-label">email</label>
-  </div>
-  <div class="col-auto">
-    <input type="text" id="email" class="form-control" th:field="*{email}" placeholder="address">
-  </div>
-  <div class="col-auto">
-  </div>
+    <div class="col-auto">
+      <label for="email" class="col-form-label">email</label>
+    </div>
+    <div class="col-auto">
+      <input type="text" id="email" class="form-control" th:field="*{email}" placeholder="address">
+    </div>
+    <div class="col-auto">
+    </div>
   </div>
   <div class="col-auto">
     <label for="lastContact" class="col-form-label">last contact</label>
   </div>
-<input id="lastContact" placeholder="lastContact" th:field="*{lastContact}" type="date">
+  <input id="lastContact" placeholder="lastContact" th:field="*{lastContact}" type="date">
 
   <input class="btn btn-primary" data-tor="hover:bg-lighten(md)" type="submit" value="Save">
 </form>
@@ -70,6 +66,5 @@
 
 <!--linking footer from footer template file-->
 <div th:replace="~{/fragments/footer :: footer}"></div>
-
 </body>
 </html>

@@ -16,22 +16,26 @@
 <div th:replace="~{/fragments/header :: header}"></div>
 
 
-<table>
+<table class="table">
+    <thread>
     <tr>
-        <th>ID</th>
-        <th>Budget</th>
-        <th>State</th>
-        <th>Name</th>
-        <th>Date</th>
+        <th scope="col">ID</th>
+        <th scope="col">Budget</th>
+        <th scope="col">State</th>
+        <th scope="col">Name</th>
+        <th scope="col">Date</th>
     </tr>
+    </thread>
+    <tbody>
     <!--/*@thymesVar id="client" type="com.example.bestcrmintheuniverse.entities.Client"*/-->
-    <tr th:each="client: ${clients}">
-        <td th:text="${deals.id}"></td>
-        <td th:text="${deals.budget}"></td>
-        <td th:text="${deals.state}"></td>
-        <td th:text="${deals.startDate}"></td>
-        <td><a th:href="@{/client/delete/{id}(id=${deal.id})}">delete</a></td>
+    <tr th:each="deal: ${deals}">
+        <td th:text="${deal.id}"></td>
+        <td th:text="${deal.budget}"></td>
+        <td th:text="${deal.state}"></td>
+        <td th:text="${deal.startDate}"></td>
+        <td><a th:href="@{/deal/delete/{id}(id=${deal.id})}">delete</a></td>
     </tr>
+    </tbody>
 </table>
 
 

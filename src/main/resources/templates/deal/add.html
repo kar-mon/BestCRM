@@ -37,7 +37,6 @@
         </div>
         <div class="col-auto">
         </div>
-    </div>
 
     <div class="col-auto">
         <label for="name" class="col-form-label">name</label>
@@ -48,16 +47,16 @@
     <div class="col-auto">
     </div>
     </div>
-
-
+    <br>
     <input id="startDate" placeholder="startDate" th:field="*{startDate}" type="date">
+    <input class="btn btn-primary" data-tor="hover:bg-lighten(md)" type="submit" value="Save">
 
-    <input class="btn btn-primary" type="submit" value="Save">
 </form>
 </section>
 </div>
 
-
+<!--linking footer from footer template file-->
+<div th:replace="~{/fragments/footer :: footer}"></div>
 
 </body>
 </html>
